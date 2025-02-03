@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coupons Data</title>
+</head>
+<body>
+    <h1>Coupons Data API</h1>
+    <p>Last updated: <span id="timestamp"></span></p>
+    <script>
+        fetch('./coupons.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('timestamp').textContent = new Date().toISOString();
+            });
+    </script>
+</body>
+</html>
